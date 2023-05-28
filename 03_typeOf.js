@@ -1,0 +1,30 @@
+console.log("***************************************");
+var bankName;
+console.log("*****Before Initialization*****");
+console.log("bankName-","value:",bankName,",","type :",typeof bankName);
+bankName="SBI bank";
+console.log("");
+console.log("*****After Initialization*****");
+console.log("bankName-","value:",bankName,",","type :",typeof bankName);
+console.log("");
+
+var marks="90%";
+console.log("marks-","value:",marks,",","type :",typeof marks);
+console.log("");
+var isWorking;
+console.log("*****Before Initialization*****");
+console.log("isWorking-","value:",isWorking,",","type :",typeof isWorking);
+console.log("");
+isWorking=true;
+console.log("*****After Initialization*****");
+console.log("isWorking-","value:",isWorking,",","type :",typeof isWorking);
+
+var totalCount="Hundred and Seven";
+console.log("");
+console.log("*****Before Initialization*****");
+console.log("totalCount-","value:",totalCount,",","type :",typeof totalCount);
+console.log("");
+totalCount=107;
+console.log("*****After Initialization*****");
+console.log("totalCount-","value:",totalCount,",","type :",typeof totalCount);
+console.log("***************************************");
