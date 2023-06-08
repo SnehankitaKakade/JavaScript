@@ -33,11 +33,11 @@ console.log(`----------------------------------------------------------------`);
 console.log(`2) Find all the employees from IT or HR department `);
 
 const itAndHrDeptObj=arrayEmps.filter((element)=>{
-    return element.emp_dept=="IT" || element.emp_dept=="HR";                            //finding object containing wipro employees
+    return element.emp_dept=="IT" || element.emp_dept=="HR";                            
 });
 
 const itAndHrDeptNames=itAndHrDeptObj.map((element)=>{
-    return element.emp_name;                                      // adding employee names to wiproEmployeeNames array
+    return element.emp_name;                                      
 })
 
 console.log(`   `, itAndHrDeptNames);
@@ -46,11 +46,11 @@ console.log(`----------------------------------------------------------------`);
 console.log(`3) Find all the employees whose employee id's are greater than 50 `);
 
 const greaterIdObj=arrayEmps.filter((element)=>{
-    return element.emp_id>50;                            //finding object containing wipro employees
+    return element.emp_id>50;                            
 });
 
 const greaterIdNames=greaterIdObj.map((element)=>{
-    return element.emp_name;                                      // adding employee names to wiproEmployeeNames array
+    return element.emp_name;                                      
 })
 
 console.log(`   `, greaterIdNames);
