@@ -74,31 +74,63 @@ console.log(`----------------------------------------------------------------`);
 
 console.log(`5) Find the average salary of the employee for all the department`);
 
-const employeeSalaryObj=arrayEmps.filter((element)=>{
+// const employeeSalaryObj=arrayEmps.filter((element)=>{
+//     return element.emp_salary;                       // selected object containing salary
+// });
+
+// let sum=0;
+// for (const element of employeeSalaryObj) {         // travels on object to sum salaries of object
+//     sum=sum+element.emp_salary;
+// }
+// const average=sum/employeeSalaryObj.length;
+// console.log(`   Average Salary : ${average}`);
+
+
+//using reduce()-----------------------------------
+
+const employeeSalaryObj=arrayEmps.map((element)=>{
     return element.emp_salary;                       // selected object containing salary
 });
 
-let sum=0;
-for (const element of employeeSalaryObj) {         // travels on object to sum salaries of object
-    sum=sum+element.emp_salary;
-}
+let sum=employeeSalaryObj.reduce((runningtotal,value)=>{
+  return runningtotal+value;
+
+});
 const average=sum/employeeSalaryObj.length;
 console.log(`   Average Salary : ${average}`);
+
 console.log(`----------------------------------------------------------------`);
 
 console.log(`6) Find the average salary of IT department`);
 
-const itEmployeeSalaryObj=arrayEmps.filter((element)=>{
-    return element.emp_dept=="IT";                       // selected object containing salary of dept IT
-});
-const itSalary=itEmployeeSalaryObj.map((element)=>{
-    return element.emp_salary;
-});
-let sumOfSalary=0;
+// const itEmployeeSalaryObj=arrayEmps.filter((element)=>{
+//     return element.emp_dept=="IT";                       // selected object containing salary of dept IT
+// });
+// const itSalary=itEmployeeSalaryObj.map((element)=>{
+//     return element.emp_salary;
+// });
+// let sumOfSalary=0;
 
-itSalary.forEach((element)=>{
-    sumOfSalary=sumOfSalary+element ;          // not need to element.emp_salary as it derectly points to salary
+// itSalary.forEach((element)=>{
+//     sumOfSalary=sumOfSalary+element ;          // not need to element.emp_salary as it derectly points to salary
+//     });
+// const itDeptSalaryAverage=sumOfSalary/itSalary.length;
+// console.log(`   IT Department Average Salary : `,itDeptSalaryAverage);
+
+//using reduce()-----------------
+
+const itEmployeeSalaryObj=arrayEmps.filter((element)=>{
+        return element.emp_dept=="IT";                       // selected object containing salary of dept IT
     });
-const itDeptSalaryAverage=sumOfSalary/itSalary.length;
-console.log(`   IT Department Average Salary : `,itDeptSalaryAverage);
+        const itSalary=itEmployeeSalaryObj.map((element)=>{
+            return element.emp_salary;
+        });
+
+    let sumOfSalary=itSalary.reduce((runningtotal,value)=>{
+        return runningtotal+value;
+      
+      });
+      const itDeptSalaryAverage=sumOfSalary/itSalary.length;
+      console.log(`   IT Department Average Salary : `,itDeptSalaryAverage);
+      
 console.log(`----------------------------------------------------------------`);
