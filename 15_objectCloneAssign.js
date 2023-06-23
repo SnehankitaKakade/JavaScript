@@ -27,7 +27,7 @@ const arrayEven=[2,30,14,8];
 console.log(`arrayNums : ${arrayNums}`);
 console.log(`arrayEven : ${arrayEven}`);
 console.log(`Merged array using spread Operator :`);
-newArray=[...arrayNums,...arrayEven];//arrayNums.concat(arrayEven);
+newArray=[...arrayNums,...arrayEven];                         //     using cancat method newArray=arrayNums.concat(arrayEven);
 console.log(newArray);
 console.log(`*************************************************************************************`);
 console.log(`4) Creating employee_info Object ==>`);
