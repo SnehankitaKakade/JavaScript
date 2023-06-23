@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Assignment</title>
+</head>
+<body>
+    
+    <h1>My Profile Details</h1>
+    <h2>Technology Stack</h2>
+    <ul>
+        <li>HTML and CSS</li>
+        <li id="second">Agile and JIRA</li>
+        <li>Angular or React</li>
+        <li>Oracle Database</li>
+    </ul>
+    <h1>My Hobbies</h1>
+    <a href="https://www.google.com" class="link">My Profile</a>
+    <p>Project Description</p>
+    <script>
+        //assigning color to h1 element
+        const selectH1=document.querySelector("h1");
+        selectH1.style.color="skyblue";
+    // assigning color to h2 element
+        const selectH2=document.querySelector("h2");
+        selectH2.style.color="red";
+    //removing second element of list
+        const list=document.querySelector("ul");
+        const listItem=document.querySelector("#second");
+        list.removeChild(listItem);
+
+        // changing value of attribute
+        const link=document.querySelector(".link");
+        link.setAttribute("href","http://www.linkedin.com");
+
+    </script>
+</body>
+</html>
